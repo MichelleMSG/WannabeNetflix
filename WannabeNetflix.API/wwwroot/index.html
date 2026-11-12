@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website fit different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title -->
+    <title>WannabeNetflix</title>
+
+    <!-- Connects the CSS file to this HTML page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Main heading -->
+<h1>WannabeNetflix</h1>
+
+<!-- Search section -->
+<div>
+    <!-- Input where the user can search for movies -->
+    <input type="text" id="searchInput" placeholder="Search for a movie...">
+
+    <!-- Button that starts the search -->
+    <button id="searchButton">Search</button>
+</div>
+
+<!-- Displays all available movies -->
+<div>
+    <h2>Movies</h2>
+
+    <!-- JavaScript adds the movies to this list -->
+    <ul id="movieList"></ul>
+</div>
+
+<!-- Displays information about the selected movie -->
+<div>
+    <h2>Movie details</h2>
+
+    <!-- Displays the selected movie's title -->
+    <h3 id="movieTitle">Select a movie</h3>
+
+    <!-- Displays the selected movie's release year -->
+    <p id="movieYear"></p>
+
+    <!-- Displays the selected movie's genre -->
+    <p id="movieGenre"></p>
+
+    <!-- Displays the selected movie's description -->
+    <p id="movieDescription"></p>
+
+    <!-- Browser's built-in video player -->
+    <video id="moviePlayer" controls width="500">
+        Your browser does not support video playback.
+    </video>
+</div>
+
+<!-- Connects the JavaScript file to this HTML page -->
+<script src="script.js"></script>
+
+</body>
+</html>

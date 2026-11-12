@@ -1,0 +1,23 @@
+﻿services:
+  mongohost:
+    image: mongo:7
+    container_name: dbmovie
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo:/data/db
+
+  server-movie:
+    build:
+      context: .
+      dockerfile: WannabeNetflix.API/Dockerfile
+      target: final
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongohost
+    environment:
+      - MovieDatabaseSettings__ConnectionString=mongodb://mongohost:27017
+
+volumes:
+  mongo:

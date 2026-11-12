@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  server-movie:
+    build:
+      context: "C:\\Users\\miche\\RiderProjects\\WannabeNetflix"
+      dockerfile: "WannabeNetflix.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net10.0/WannabeNetflix.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net10.0/WannabeNetflix.API.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "wannabenetflix.api:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\miche\\RiderProjects\\WannabeNetflix\\WannabeNetflix.API:/app:rw"
+    - "C:\\Users\\miche\\RiderProjects\\WannabeNetflix:/src:rw"
+    - "C:\\Users\\miche\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
